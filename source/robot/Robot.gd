@@ -48,6 +48,7 @@ func move(direction):
 			global_position = new_position
 	else:
 		set_facing(direction)
+	input_direction = null
 	action_timer.start()
 
 func can_move(new_position):
@@ -56,4 +57,3 @@ func can_move(new_position):
 func _on_ActionCooldown_timeout():
 	if input_direction:
 		move(input_direction)
-		input_direction = null

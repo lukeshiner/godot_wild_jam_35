@@ -22,7 +22,6 @@ __meta__ = {
 margin_right = 1024.0
 margin_bottom = 570.0
 grow_vertical = 2
-focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 meta_underlined = false
@@ -45,7 +44,7 @@ __meta__ = {
 [node name="ConsoleInput" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
 margin_right = 938.0
 margin_bottom = 26.0
-focus_mode = 1
+focus_mode = 0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )
 text = "Hello, World!"
