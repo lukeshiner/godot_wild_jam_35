@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/ls_pixel_mono.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/console/Console.gd" type="Script" id=2]
+
+[node name="Console" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsoleOutput" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 570.0
+grow_vertical = 2
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+meta_underlined = false
+text = "Hello, World!
+
+New Line
+new line
+"
+scroll_following = true
+selection_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 574.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsoleInput" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_right = 938.0
+margin_bottom = 26.0
+focus_mode = 1
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Hello, World!"
+clear_button_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 942.0
+margin_right = 1024.0
+margin_bottom = 26.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0, 1, 0, 1 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 1, 0, 1 )
+text = "ENTER"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.025
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

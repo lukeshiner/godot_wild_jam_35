@@ -1,0 +1,5 @@
+source/.import/
+source/*.translation
+source/data_*/
+builds/*
+exports/

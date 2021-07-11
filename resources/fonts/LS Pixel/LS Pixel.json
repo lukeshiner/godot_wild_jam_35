@@ -1,0 +1,43 @@
+{
+	"$baseURI": "https://yal.cc/r/20/pixelfont/",
+	"$version": "1.0",
+	"in-glyphs": [
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+		"abcdefghijklmnopqrstuvwxyz",
+		"0123456789",
+		"',.?\"\"!<>()[]@/\\:;#",
+		"£$%^&|¦¬~"
+	],
+	"glyph-color": "auto",
+	"in-kerning": [
+		""
+	],
+	"glyph-width": 8,
+	"glyph-height": 9,
+	"glyph-ofs-x": 0,
+	"glyph-ofs-y": 0,
+	"glyph-sep-x": 0,
+	"glyph-sep-y": 0,
+	"glyph-base-x": 0,
+	"glyph-baseline": 7,
+	"glyph-spacing": 1,
+	"font-is-mono": false,
+	"font-em-square": 1024,
+	"font-line-gap": 0,
+	"font-ascend": 768,
+	"font-descend": -256,
+	"font-px-size": 128,
+	"font-name": "LS Pixel",
+	"font-author": "Luke Shiner",
+	"font-copy": "(c) Luke Shiner 2021",
+	"font-version": "Version 0.1",
+	"font-desc": "A pixel font",
+	"font-license": "MIT",
+	"font-license-url": "",
+	"font-sample-text": "Hello, World!",
+	"font-preview-text": [
+		"THE QUICK BROWN FOX JUMPS OVER A LAZY DOG.",
+		"the quick brown fox jumps over a lazy dog.",
+		"0123456789"
+	]
+}

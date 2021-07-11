@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/console/Console.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/robot_screen/RobotScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/console_flat.tres" type="StyleBox" id=3]
+[ext_resource path="res://ui/screen/Screen.gd" type="Script" id=4]
+
+[node name="Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopSection" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelTopLeft" type="Panel" parent="VBoxContainer/TopSection"]
+margin_right = 510.0
+margin_bottom = 298.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TopSection/PanelTopLeft"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Console" parent="VBoxContainer/TopSection/PanelTopLeft/MarginContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 490.0
+margin_bottom = 278.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelTopRight" type="Panel" parent="VBoxContainer/TopSection"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 298.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 3 )
+
+[node name="RobotScreen" parent="VBoxContainer/TopSection/PanelTopRight" instance=ExtResource( 2 )]
+focus_mode = 2
+
+[node name="BottomSection" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 302.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelBottomLeft" type="Control" parent="VBoxContainer/BottomSection"]
+margin_right = 510.0
+margin_bottom = 298.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/BottomSection/PanelBottomLeft"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelBottomRight" type="Control" parent="VBoxContainer/BottomSection"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 298.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/BottomSection/PanelBottomRight"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
