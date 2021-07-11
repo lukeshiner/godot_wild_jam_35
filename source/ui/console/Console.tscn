@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/fonts/ls_pixel_mono.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ui/console/Console.gd" type="Script" id=2]
+[ext_resource path="res://ui/console.tres" type="Theme" id=3]
 
 [node name="Console" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+focus_mode = 2
+mouse_filter = 1
+theme = ExtResource( 3 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -20,8 +24,9 @@ __meta__ = {
 
 [node name="ConsoleOutput" type="RichTextLabel" parent="VBoxContainer"]
 margin_right = 1024.0
-margin_bottom = 570.0
+margin_bottom = 560.0
 grow_vertical = 2
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 meta_underlined = false
@@ -34,7 +39,7 @@ scroll_following = true
 selection_enabled = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 574.0
+margin_top = 564.0
 margin_right = 1024.0
 margin_bottom = 600.0
 __meta__ = {
@@ -42,23 +47,22 @@ __meta__ = {
 }
 
 [node name="ConsoleInput" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-margin_right = 938.0
-margin_bottom = 26.0
-focus_mode = 0
+margin_right = 930.0
+margin_bottom = 36.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )
 text = "Hello, World!"
 clear_button_enabled = true
 caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 942.0
+margin_left = 934.0
 margin_right = 1024.0
-margin_bottom = 26.0
-focus_mode = 0
+margin_bottom = 36.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color_disabled = Color( 0, 1, 0, 1 )
 custom_colors/font_color = Color( 0, 1, 0, 1 )

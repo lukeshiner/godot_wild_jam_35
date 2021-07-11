@@ -30,6 +30,8 @@ func set_facing(new_direction):
 	sprite.rotation = Vector2.UP.angle_to(new_direction)
 
 func _unhandled_input(event):
+	if Global.active_window != Global.windows.ROBOT:
+		return
 	if event.is_action_pressed("ui_up"):
 		input_direction = Vector2.UP
 	elif event.is_action_pressed("ui_down"):

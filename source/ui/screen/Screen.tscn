@@ -34,25 +34,22 @@ mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TopSection/PanelTopLeft"]
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/TopSection/PanelTopLeft"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
+focus_mode = 1
+stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Console" parent="VBoxContainer/TopSection/PanelTopLeft/MarginContainer" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 490.0
-margin_bottom = 278.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="Viewport" type="Viewport" parent="VBoxContainer/TopSection/PanelTopLeft/ViewportContainer"]
+size = Vector2( 510, 298 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Console" parent="VBoxContainer/TopSection/PanelTopLeft/ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
 [node name="PanelTopRight" type="Panel" parent="VBoxContainer/TopSection"]
 margin_left = 514.0
@@ -64,7 +61,6 @@ size_flags_vertical = 3
 custom_styles/panel = ExtResource( 3 )
 
 [node name="RobotScreen" parent="VBoxContainer/TopSection/PanelTopRight" instance=ExtResource( 2 )]
-focus_mode = 2
 
 [node name="BottomSection" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 302.0
