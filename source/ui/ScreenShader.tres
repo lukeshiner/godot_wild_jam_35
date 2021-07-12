@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://ui/shader_mask.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float amount: hint_range(0.0, 1.0);
+uniform sampler2D mask: hint_white;
+
+void fragment() {
+	vec4 colour = texture(TEXTURE, UV);
+	vec4 strength = texture(mask, UV);
+	COLOR = colour * (strength * amount);
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/amount = 0.461
+shader_param/mask = ExtResource( 1 )
