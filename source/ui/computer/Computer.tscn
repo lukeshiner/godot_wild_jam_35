@@ -27,14 +27,11 @@ __meta__ = {
 [node name="ScreenMargin" type="Control" parent="Screenspace"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
+margin_left = 35.0
+margin_top = 35.0
+margin_right = -35.0
+margin_bottom = -35.0
 mouse_filter = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ViewportContainer" type="ViewportContainer" parent="Screenspace/ScreenMargin"]
 anchor_right = 1.0
@@ -45,7 +42,7 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="Screenspace/ScreenMargin/ViewportContainer"]
-size = Vector2( 984, 560 )
+size = Vector2( 954, 530 )
 transparent_bg = true
 handle_input_locally = false
 msaa = 1
