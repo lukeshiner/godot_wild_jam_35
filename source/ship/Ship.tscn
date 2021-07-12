@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ship/console_corridor_tilemap/tileset_console_corridor_tilemap.tres" type="TileSet" id=1]
 [ext_resource path="res://robot/Robot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ship/Interface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ship/Door.tscn" type="PackedScene" id=4]
 
 [node name="Ship" type="Node2D"]
 
@@ -10,6 +11,18 @@
 tile_set = ExtResource( 1 )
 format = 1
 tile_data = PoolIntArray( -327680, 0, 196608, -327679, 0, 196609, -327678, 0, 8, -327677, 0, 196610, -262142, 0, 65539, -131079, 0, 0, -131078, 0, 2, -196608, 0, 0, -196607, 0, 1, -196606, 0, 131080, -196605, 0, 2, -65544, 0, 0, -65543, 0, 131078, -65542, 0, 65538, -65537, 0, 0, -131072, 0, 131078, -131071, 0, 65537, -131070, 0, 65537, -131069, 0, 131077, -131068, 0, 2, -8, 0, 65536, -7, 0, 65537, -6, 0, 262149, -5, 0, 196609, -4, 0, 196609, -3, 0, 196609, -2, 0, 196609, -1, 0, 262150, -65536, 0, 65537, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 262149, -65531, 0, 196610, 65528, 0, 131072, 65529, 0, 65542, 65530, 0, 65538, 65535, 0, 131072, 0, 0, 65542, 1, 0, 65537, 2, 0, 65537, 3, 0, 65541, 4, 0, 131074, 131065, 0, 131072, 131066, 0, 131074, 65536, 0, 131072, 65537, 0, 131073, 65538, 0, 65544, 65539, 0, 131074, 131074, 0, 65539, 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 196616, 196611, 0, 196610 )
+
+[node name="Door" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( -96, -32 )
+
+[node name="Door2" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 160, -224 )
+rotation = 1.57079
+
+[node name="Door3" parent="TileMap" instance=ExtResource( 4 )]
+position = Vector2( 160, 160 )
+rotation = 1.57079
+is_open = true
 
 [node name="Interface" parent="." instance=ExtResource( 3 )]
 position = Vector2( 96, -160 )

@@ -20,6 +20,7 @@ export(DIRECTIONS) var start_facing
 onready var tilemap = get_parent().get_node("TileMap")
 onready var sprite = $Sprite
 onready var action_timer = $ActionCooldown
+onready var ray = $RayCast2D
 
 func _ready():
 	if start_facing:
@@ -28,6 +29,7 @@ func _ready():
 func set_facing(new_direction):
 	facing = new_direction
 	sprite.rotation = Vector2.UP.angle_to(new_direction)
+	ray.cast_to = facing * 64
 
 func _unhandled_input(event):
 	if Global.active_window != Global.windows.ROBOT:
@@ -52,9 +54,15 @@ func move(direction):
 		set_facing(direction)
 	input_direction = null
 	action_timer.start()
+	print(ray.cast_to)
+	print(ray.is_colliding ( ))
 
 func can_move(new_position):
-	return tilemap.get_cellv(tilemap.world_to_map(new_position)) != -1
+	if tilemap.get_cellv(tilemap.world_to_map(new_position)) == -1:
+		return false
+	if ray.get_collider():
+		return false
+	return true
 
 func _on_ActionCooldown_timeout():
 	if input_direction:
