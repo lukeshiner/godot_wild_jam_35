@@ -31,19 +31,6 @@ func set_facing(new_direction):
 	sprite.rotation = Vector2.UP.angle_to(new_direction)
 	ray.cast_to = facing * 64
 
-func _unhandled_input(event):
-	if Global.active_window != Global.windows.ROBOT:
-		return
-	if event.is_action_pressed("ui_up"):
-		input_direction = Vector2.UP
-	elif event.is_action_pressed("ui_down"):
-		input_direction = Vector2.DOWN
-	elif event.is_action_pressed("ui_left"):
-		input_direction = Vector2.LEFT
-	elif event.is_action_pressed("ui_right"):
-		input_direction = Vector2.RIGHT
-	Global.console_io.print_text("Move Robot\n")
-
 
 func move(direction):
 	if facing == direction:
@@ -54,8 +41,6 @@ func move(direction):
 		set_facing(direction)
 	input_direction = null
 	action_timer.start()
-	print(ray.cast_to)
-	print(ray.is_colliding ( ))
 
 func can_move(new_position):
 	if tilemap.get_cellv(tilemap.world_to_map(new_position)) == -1:
