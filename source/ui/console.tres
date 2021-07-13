@@ -1,9 +1,15 @@
-[gd_resource type="Theme" load_steps=5 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://ui/console_flat.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/fonts/ls_pixel.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/fonts/ls_pixel_mono.tres" type="DynamicFont" id=3]
 [ext_resource path="res://ui/console_border.tres" type="StyleBox" id=4]
+[ext_resource path="res://ui/icons/fs_arrow_collapsed.png" type="Texture" id=5]
+[ext_resource path="res://ui/icons/unchecked.png" type="Texture" id=6]
+[ext_resource path="res://ui/icons/fs_arrow.png" type="Texture" id=7]
+[ext_resource path="res://ui/icons/fs_arrow_up_down.png" type="Texture" id=8]
+[ext_resource path="res://ui/icons/select_arrow.png" type="Texture" id=9]
+[ext_resource path="res://ui/icons/checked.png" type="Texture" id=10]
 
 [resource]
 default_font = ExtResource( 2 )
@@ -97,6 +103,42 @@ TextEdit/styles/completion = null
 TextEdit/styles/focus = ExtResource( 1 )
 TextEdit/styles/normal = ExtResource( 1 )
 TextEdit/styles/read_only = ExtResource( 1 )
+Tree/colors/custom_button_font_highlight = Color( 0, 1, 0, 1 )
+Tree/colors/drop_position_color = Color( 1, 0.3, 0.2, 1 )
+Tree/colors/font_color = Color( 0, 0.501961, 0, 1 )
+Tree/colors/font_color_selected = Color( 0, 1, 0, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 0.1 )
+Tree/colors/relationship_line_color = Color( 0, 0.501961, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0.501961, 0, 1 )
+Tree/constants/button_margin = 3
+Tree/constants/draw_guides = 1
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/hseparation = 4
+Tree/constants/item_margin = 12
+Tree/constants/scroll_border = 4
+Tree/constants/scroll_speed = 12
+Tree/constants/vseparation = 4
+Tree/fonts/font = null
+Tree/fonts/title_button_font = null
+Tree/icons/arrow = ExtResource( 7 )
+Tree/icons/arrow_collapsed = ExtResource( 5 )
+Tree/icons/checked = ExtResource( 10 )
+Tree/icons/select_arrow = ExtResource( 9 )
+Tree/icons/unchecked = ExtResource( 6 )
+Tree/icons/updown = ExtResource( 8 )
+Tree/styles/bg = ExtResource( 1 )
+Tree/styles/bg_focus = ExtResource( 1 )
+Tree/styles/button_pressed = ExtResource( 1 )
+Tree/styles/cursor = ExtResource( 1 )
+Tree/styles/cursor_unfocused = ExtResource( 1 )
+Tree/styles/custom_button = ExtResource( 1 )
+Tree/styles/custom_button_hover = ExtResource( 1 )
+Tree/styles/custom_button_pressed = ExtResource( 1 )
+Tree/styles/selected = ExtResource( 1 )
+Tree/styles/selected_focus = ExtResource( 1 )
+Tree/styles/title_button_hover = ExtResource( 1 )
+Tree/styles/title_button_normal = ExtResource( 1 )
+Tree/styles/title_button_pressed = ExtResource( 1 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null

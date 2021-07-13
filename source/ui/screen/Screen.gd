@@ -2,7 +2,8 @@ extends Control
 
 onready var windows = {
 	Global.windows.CONSOLE: $VBoxContainer/TopSection/PanelTopLeft/ConsoleWindow,
-	Global.windows.ROBOT: $VBoxContainer/TopSection/PanelTopRight/RobotWindow
+	Global.windows.ROBOT: $VBoxContainer/TopSection/PanelTopRight/RobotWindow,
+	Global.windows.FILESYSTEM: $VBoxContainer/BottomSection/PanelBottomLeft/FileSystemWindow,
 }
 
 var active_window setget set_active_window
@@ -22,3 +23,5 @@ func _unhandled_input(event):
 		set_active_window(Global.windows.CONSOLE)
 	elif event.is_action_pressed("select_robot_screen"):
 		set_active_window(Global.windows.ROBOT)
+	elif event.is_action_pressed("select_filesystem_screen"):
+		set_active_window(Global.windows.FILESYSTEM)
