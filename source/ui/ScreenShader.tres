@@ -9,7 +9,7 @@ uniform float amount: hint_range(0.0, 1.0);
 uniform sampler2D mask: hint_white;
 
 void fragment() {
-	vec4 colour = texture(TEXTURE, UV);
+	vec4 colour = texture(SCREEN_TEXTURE, SCREEN_UV);
 	vec4 strength = texture(mask, UV);
 	COLOR = colour * (strength * amount);
 }"
