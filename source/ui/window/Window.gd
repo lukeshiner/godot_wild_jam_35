@@ -1,3 +1,4 @@
+class_name ScreenWindow
 extends Panel
 
 export(String) var view_scene_path

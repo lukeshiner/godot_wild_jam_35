@@ -2,7 +2,8 @@ extends Tree
 
 
 func _ready():
-	set_columns(3)
+
+
 	var root = create_item()
 	root.set_text(0, "Interface 42D")
 	var files = create_item(root)
